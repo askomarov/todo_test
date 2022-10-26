@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clip0_8_30">
+      <rect width="22" height="22" fill="white" />
+    </clipPath>
+  </defs>
+  <symbol id="icon-add" viewBox="0 0 20 20">
+    <g fill="none">
+      <path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </symbol>
+  <symbol id="icon-user" viewBox="0 0 22 22">
+    <g fill="none">
+      <g clip-path="url(#clip0_8_30)">
+        <circle cx="11" cy="23" r="8.4" stroke="black" stroke-width="1.2" />
+        <circle cx="11" cy="7" r="3.4" stroke="black" stroke-width="1.2" />
+      </g>
+
+    </g>
+  </symbol>
+</svg>
