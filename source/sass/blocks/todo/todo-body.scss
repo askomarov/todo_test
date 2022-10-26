@@ -1,0 +1,71 @@
+.todo-body {
+  height: 540px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 20px;
+
+  background: #252e42;
+  box-shadow: var(--box-shadow);
+  border-radius: 20px 0 40px;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 75px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(37, 46, 66, 0) 0%, #252e42 67.19%);
+  }
+
+  @media (min-width: $width-tablet) {
+    padding-left: 31px;
+  }
+}
+
+.todo-body__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-body__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.todo-body__list {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-bottom: 30px;
+}
+
+.todo-body__decor {
+  position: absolute;
+  z-index: -1;
+  top: -42px;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 112px;
+  background-image: url("../img/todo-decor-img.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $width-mobile-h) {
+    background-size: cover;
+    width: 333px;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: 400px;
+  }
+}

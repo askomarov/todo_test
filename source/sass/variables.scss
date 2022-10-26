@@ -1,0 +1,26 @@
+$min-width: 320 + px;
+$max-width: 1852 + px;
+$width-mobile: 320 + px;
+$width-mobile-h: 667 + px;
+$width-tablet: 767 + px;
+$width-tablet-h: 1020 + px;
+$width-desktop: 1340 + px;
+
+$transition: 0.3s ease-out 0s;
+$font-family: "Montserrat", "Arial", sans-serif;
+
+$primary-color: #ff8469;
+
+$fz-default: 16px;
+$transition: 0.3s ease 0s;
+
+:root {
+  --text-primary: #ffffff;
+  --text-secondary: #4f5565;
+
+  --primary-color: #ff8469;
+  --primary-color-500: #d95133;
+  --box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+  --bg-gradient: radial-gradient(50% 50% at 50% 50%, #252e42 0%, #161c2e 100%);
+  --checkbox-default: #4f5565;
+}

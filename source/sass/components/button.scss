@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-family: $font-family;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 7px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  transition: all $transition;
+
+  &--primary {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+
+    &:hover {
+      background-color: var(--primary-color-500);
+    }
+  }
+}

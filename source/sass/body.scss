@@ -1,0 +1,12 @@
+.body {
+  background: var(--bg-gradient);
+  background-size: 200% 200%;
+
+  animation: bgposition 8s ease-in-out 0s infinite;
+
+  @include scroll-bar;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}

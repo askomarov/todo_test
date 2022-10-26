@@ -1,0 +1,82 @@
+.todo-item {
+  display: grid;
+  width: 100%;
+  grid-template-columns: min-content 1fr;
+  column-gap: 15px;
+  padding: 9px 0;
+  cursor: pointer;
+  transition: all $transition;
+
+  &:hover {
+    --checkbox-default: rgba(255, 132, 105, 0.2);
+
+    .todo-item__title {
+      color: var(--primary-color);
+    }
+  }
+
+  @media (min-width: $width-tablet) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: linear-gradient(270deg, #252e42 9.38%, rgba(37, 46, 66, 0) 66.15%);
+    }
+  }
+}
+
+.todo-item--checked {
+  .todo-item__title {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+  }
+}
+
+.todo-item__checkbox {
+  align-self: center;
+}
+
+.todo-item__text-content {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.todo-item__title {
+  padding-right: 5px;
+  grid-column: 2/3;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  transition: color $transition;
+
+  @media (min-width: $width-tablet) {
+    padding-right: 30px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+
+.todo-item__text {
+  transition: color $transition;
+  grid-column: 2/3;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--text-secondary);
+  max-width: 100%;
+  overflow-x: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}

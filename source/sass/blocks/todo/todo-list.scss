@@ -1,0 +1,5 @@
+.todo-list {
+  overflow-x: hidden;
+
+  @include scroll-bar;
+}

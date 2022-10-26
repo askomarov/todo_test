@@ -1,0 +1,15 @@
+mixin custom-checkbox(id, name, labelText, checked)
+  if labelText.length !== 0
+    .custom-checkbox(class!=attributes.class)
+      if checked === true
+        input(type="checkbox", id=id, name=name, checked).custom-checkbox__input.visually-hidden
+      else
+        input(type="checkbox", id=id, name=name).custom-checkbox__input.visually-hidden
+      label(for=name).custom-checkbox__label= labelText
+  else
+    .custom-checkbox(class!=attributes.class)
+      if checked === true
+        input(type="checkbox", id=id, name=name, checked).custom-checkbox__input.visually-hidden
+      else
+        input(type="checkbox", id=id, name=name).custom-checkbox__input.visually-hidden
+      label(for=name).custom-checkbox__label.custom-checkbox__label--empty

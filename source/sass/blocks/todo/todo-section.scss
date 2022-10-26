@@ -1,0 +1,20 @@
+.todo-section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 120px;
+  }
+}
+
+.todo-section__todo-body {
+  margin-bottom: 31px;
+}
+
+.todo-section__copy {
+  text-align: center;
+
+  p {
+    color: var(--text-secondary);
+  }
+}

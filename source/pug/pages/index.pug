@@ -1,0 +1,78 @@
+extends ../base/layout
+
+block variables
+  - const title = "todo test"
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentPage = 0
+
+  -
+    var todoList = [
+      {
+        id: 1,
+        checked: false,
+        title: 'delectus aut autem',
+        text: 'laboriosam mollitia et enim quasi adipisci quia provident illum'
+      },
+      {
+        id: 2,
+        checked: false,
+        title: 'quo laboriosam deleniti aut qui',
+        text: false
+      },
+      {
+        id: 3,
+        checked: true,
+        title: 'laboriosam mollitia et enim quasi adipisci quia provident illum',
+        text: false,
+      },
+      {
+        id: 4,
+        checked: false,
+        title: 'repellendus sunt dolores architecto voluptatum',
+        text: 'accusamus eos facilis sint et aut voluptatem'
+      },
+      {
+        id: 5,
+        checked: true,
+        title: 'laboriosam mollitia et enim quasi adipisci quia provident illum',
+        text: false,
+      },
+      {
+        id: 6,
+        checked: false,
+        title: 'repellendus sunt dolores architecto voluptatum',
+        text: 'accusamus eos facilis sint et aut voluptatem'
+      },
+      {
+        id: 7,
+        checked: false,
+        title: 'repellendus sunt dolores architecto voluptatum',
+        text: 'accusamus eos facilis sint et aut voluptatem'
+      },
+    ]
+
+block main
+  main.main
+    h1.visually-hidden Nice todo list - made with pug, scss and love
+    section.todo-section
+      .container
+        .todo-body.todo-section__todo-body
+          .todo-body__decor
+          header.todo-body__header
+            h2.todo-body__title Todo list
+            button(type="button").todo-body__button-add.button.button--primary Add
+          ul.todo-body__list.todo-list
+            each item in todoList
+              li.todo-list__item.todo-item( class=item.checked ? "todo-item--checked" : "", data-id=`${item.id}`)
+                +custom-checkbox(`todo-${item.id}`, `todo-${item.id}`,'', item.checked).todo-item__checkbox
+                .todo-item__text-content
+                  if item.title
+                    h3.todo-item__title= item.title
+                  if item.text
+                    p.todo-item__text= item.text
+        .todo-section__copy
+          p &copy; 2022. Author Name
