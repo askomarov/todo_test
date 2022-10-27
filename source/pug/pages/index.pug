@@ -69,9 +69,9 @@ block main
             each item in todoList
               li.todo-list__item.todo-item( class=item.checked ? "todo-item--checked" : "", data-id=`${item.id}`)
                 +custom-checkbox(`todo-${item.id}`, `todo-${item.id}`,'', item.checked).todo-item__checkbox
-                .todo-item__text-content
+                label(for=`todo-${item.id}`).todo-item__text-content
                   if item.title
-                    h3.todo-item__title= item.title
+                    p.todo-item__title= item.title
                   if item.text
                     p.todo-item__text= item.text
         .todo-section__copy

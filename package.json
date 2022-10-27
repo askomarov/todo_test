@@ -19,7 +19,6 @@
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
-    "eslint": "^8.26.0",
     "gulp": "^4.0.2",
     "gulp-beautify": "^3.0.0",
     "gulp-cached": "^1.1.1",
@@ -63,6 +62,7 @@
     "source/sass/**/*.{sass,scss}"
   ],
   "dependencies": {
+    "eslint": "^8.26.0",
     "gh-pages": "^4.0.0",
     "swiper": "^8.3.2"
   }
